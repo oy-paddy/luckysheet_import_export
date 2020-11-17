@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Hello World!</title>
+        <link rel='stylesheet' href='./luckysheet/plugins/css/pluginsCss.css' />
+        <link rel='stylesheet' href='./luckysheet/plugins/plugins.css' />
+        <link rel='stylesheet' href='./luckysheet/css/luckysheet.css' />
+        <link rel='stylesheet' href='./luckysheet/assets/iconfont/iconfont.css' />
+        <script src="./luckysheet/plugins/js/plugin.js"></script>
+        <script src="./luckysheet/luckysheet.umd.js"></script>
+        <script>
+            $(function () {
+                //Configuration item
+                var options = {
+                    container: 'luckysheet', //luckysheet is the container id
+                    showinfobar:false,
+                }
+                luckysheet.create(options)
+            });
+        </script>
+    </head>
+    <body>
+        <div id="lucky-mask-demo" style="position: absolute;z-index: 1000000;left: 0px;top: 0px;bottom: 0px;right: 0px; background: rgba(255, 255, 255, 0.8); text-align: center;font-size: 40px;align-items:center;justify-content: center;display: none;">Downloading</div>
+        <p style="text-align:center;"> <input style="font-size:16px;" type="file" id="Luckyexcel-demo-file" name="Luckyexcel-demo-file" change="demoHandler" /> Or Load remote xlsx file: <select style="height: 27px;top: -2px;position: relative;" id="Luckyexcel-select-demo"> <option value="">select a demo</option> <option value="https://minio.cnbabylon.com/public/luckysheet/money-manager-2.xlsx">Money Manager.xlsx</option> <option value="https://minio.cnbabylon.com/public/luckysheet/Activity%20costs%20tracker.xlsx">Activity costs tracker.xlsx</option><option value="https://minio.cnbabylon.com/public/luckysheet/House%20cleaning%20checklist.xlsx">House cleaning checklist.xlsx</option><option value="https://minio.cnbabylon.com/public/luckysheet/Student%20assignment%20planner.xlsx">Student assignment planner.xlsx</option><option value="https://minio.cnbabylon.com/public/luckysheet/Credit%20card%20tracker.xlsx">Credit card tracker.xlsx</option><option value="https://minio.cnbabylon.com/public/luckysheet/Blue%20timesheet.xlsx">Blue timesheet.xlsx</option><option value="https://minio.cnbabylon.com/public/luckysheet/Student%20calendar%20%28Mon%29.xlsx">Student calendar (Mon).xlsx</option><option value="https://minio.cnbabylon.com/public/luckysheet/Blue%20mileage%20and%20expense%20report.xlsx">Blue mileage and expense report.xlsx</option> </select> <a href="javascript:void(0)" id="Luckyexcel-downlod-file">Download source xlsx file</a></p>
+        <div id="luckysheet" style="margin:0px;padding:0px;position:absolute;width:100%;left: 0px;top: 50px;bottom: 0px;outline: none;"></div>
+        <script src="luckyexcel.js"></script>
+        <!-- <script type="module" src="index.js"></script> -->
+        <!-- <script type="module">
+            // import {importFile} from './main';
+            window.onload = () => {
+                let upload = document.getElementById("file");
+                upload.addEventListener("change", function(evt){
+                    var files = evt.target.files;   
+                    importFile(files[0]);
+                });
+            }
+        </script> -->
+    </body>
+</html>
